@@ -17,12 +17,12 @@ def bot():
     msg = resp.message()
     responded = False
     
-    if 'Hi' in incoming_msg or 'Hey' in incoming_msg or 'Hello' in incoming_msg:
+    if 'hi' in incoming_msg.lower() or 'hey' in incoming_msg.lower() or 'hello' in incoming_msg.lower():
         text =  'Hi from 1point1 solutions please type Info to know about us'
         msg.body(text)
         responded = True
 
-    if 'Info' in incoming_msg:
+    if 'Info' in incoming_msg.lower():
         # return total cases
         text='1Point1 enables its clients to adopt the right technology tools and refurbish their IT landscape for a leading edge in a fast-paced marketplace.'
         msg.body(text)
