@@ -22,7 +22,7 @@ def bot():
         msg.body(text)
         responded = True
 
-    if 'Info' in incoming_msg.lower():
+    if 'Info' in incoming_msg:
         # return total cases
         text='1Point1 enables its clients to adopt the right technology tools and refurbish their IT landscape for a leading edge in a fast-paced marketplace.'
         msg.body(text)
