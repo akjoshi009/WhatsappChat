@@ -24,7 +24,7 @@ def bot():
 
     if 'info' in incoming_msg.lower():
         # return total cases
-        text='IRA supports Following Menu:\n 1:Check Balance \n 2:Cheque Book Request \n 3:E-statement 4:Exit'
+        text='IRA  Bot 🤖 supports Following Menu:\n 1:Check Balance \n 2:Cheque Book Request \n 3:E-statement \n 4:Exit'
         msg.body(text)
         responded = True
         
@@ -34,12 +34,12 @@ def bot():
         responded = True
         
     if 'cheque book request' in incoming_msg.lower() or '2' in incoming_msg.lower():
-        text='You are requested for cheque book it will delivered in next 7 days 🙂🙂.for going to main menu replay with info'
+        text='You are requested for cheque book it will delivered in next 7 days 🙂🙂.\n for going to main menu replay with info'
         msg.body(text)
         responded = True
         
     if 'e-statement' in incoming_msg.lower() or 'statement' in incoming_msg.lower() or '3' in incoming_msg.lower():
-        text='E-staetment is mailed to your email id a*****dt@***.com 🙂🙂 for going to main menu replay with info'
+        text='E-staetment is mailed to your email id a*****dt@***.com 🙂🙂 \n for going to main menu replay with info'
         msg.body(text)
         responded = True    
         
@@ -49,7 +49,7 @@ def bot():
         responded = True
 
     if responded == False:
-        msg.body('I dont understand please send info to get more information., sorry 🙇🏽‍♂️🙇🏽‍♂️!')
+        msg.body('I dont understand please send info to get more information., \n sorry 🙇🏽‍♂️🙇🏽‍♂️!')
 
     return str(resp)
 
