@@ -17,8 +17,8 @@ def bot():
     resp = MessagingResponse()
     msg = resp.message()
     responded = False
-    
-    if 'hi' in incoming_msg.lower() or 'hey' in incoming_msg.lower() or 'hello' in incoming_msg.lower():
+    if start==0:
+        if 'hi' in incoming_msg.lower() or 'hey' in incoming_msg.lower() or 'hello' in incoming_msg.lower():
             text =  'Hi I am IRA Bot 🤖 ,Whats your name?'
             start=1
             msg.body(text)
@@ -29,12 +29,12 @@ def bot():
          start=2
          msg.body(text)
          responded = True
-   elif start==2:
+    elif start==2:
          text="Phone number validated please type menu to list services."
          start=3
          msg.body(text)
          responded = True
-   elif start==3:
+    elif start==3:
         if 'menu' in incoming_msg.lower():
             # return total cases
             text='IRA  Bot 🤖 supports Following \n Menu:\n 1:Check Balance \n 2:Cheque Book Request \n 3:E-statement \n 4:Exit'
