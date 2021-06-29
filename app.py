@@ -4,7 +4,7 @@ import json
 from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
-
+start=0
 
 @app.route("/")
 def hello():
