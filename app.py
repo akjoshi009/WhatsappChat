@@ -24,7 +24,7 @@ def bot():
 
     if 'info' in incoming_msg.lower():
         # return total cases
-        text='IRA  Bot 🤖 supports Following Menu:\n 1:Check Balance \n 2:Cheque Book Request \n 3:E-statement \n 4:Exit'
+        text='IRA  Bot 🤖 supports Following \n Menu:\n 1:Check Balance \n 2:Cheque Book Request \n 3:E-statement \n 4:Exit'
         msg.body(text)
         responded = True
         
