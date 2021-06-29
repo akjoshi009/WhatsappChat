@@ -12,6 +12,7 @@ def hello():
 @app.route('/bot', methods=['POST'])
 def bot():
     incoming_msg = request.values.get('Body', '')
+    mobnumber=request.values.get('From','')
     #print(incoming_msg)
     resp = MessagingResponse()
     msg = resp.message()
@@ -49,7 +50,7 @@ def bot():
         responded = True
 
     if responded == False:
-        msg.body('I dont understand please send info to get more information., \n sorry 🙇🏽‍♂️🙇🏽‍♂️!')
+        msg.body('I dont understand please send info to get more information., \n sorry 🙇🏽‍♂️🙇🏽‍♂️!'+mobnumber)
 
     return str(resp)
 
