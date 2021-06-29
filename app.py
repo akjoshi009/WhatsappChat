@@ -18,23 +18,38 @@ def bot():
     responded = False
     
     if 'hi' in incoming_msg.lower() or 'hey' in incoming_msg.lower() or 'hello' in incoming_msg.lower():
-        text =  'Hi from 1point1 solutions please type Info to know about us'
+        text =  'Hi I am IRA Bot 🤖 ,Please say info to get all menu.'
         msg.body(text)
         responded = True
 
-    if 'Info' in incoming_msg:
+    if 'info' in incoming_msg.lower():
         # return total cases
-        text='1Point1 enables its clients to adopt the right technology tools and refurbish their IT landscape for a leading edge in a fast-paced marketplace.'
+        text='IRA supports Following Menu:\n 1:Check Balance \n 2:Cheque Book Request \n 3:E-statement 4:Exit'
         msg.body(text)
         responded = True
-
-    if 'Bye' in incoming_msg or 'bye' in incoming_msg:
+        
+    if 'check balance' in incoming_msg.lower() or '1' in incoming_msg.lower():
+        text='Your balance is Rs.21245 for going to main menu replay with info 🙂🙂'
+        msg.body(text)
+        responded = True
+        
+    if 'cheque book request' in incoming_msg.lower() or '2' in incoming_msg.lower():
+        text='You are requested for cheque book it will delivered in next 7 days 🙂🙂.for going to main menu replay with info'
+        msg.body(text)
+        responded = True
+        
+    if 'e-statement' in incoming_msg.lower() or 'statement' in incoming_msg.lower() or '3' in incoming_msg.lower():
+        text='E-staetment is mailed to your email id a*****dt@***.com 🙂🙂 for going to main menu replay with info'
+        msg.body(text)
+        responded = True    
+        
+    if 'bye' in incoming_msg.lower() or 'exit' in incoming_msg.lower() or '4' in incoming_msg.lower():
         text='Bye nice talking to you'
         msg.body(text)
         responded = True
 
     if responded == False:
-        msg.body('I only know about 1Point1 Solutions, sorry!')
+        msg.body('I dont understand please send info to get more information., sorry 🙇🏽‍♂️🙇🏽‍♂️!')
 
     return str(resp)
 
