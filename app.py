@@ -23,39 +23,39 @@ def bot():
         msg.body(text)
         responded = True
 
-    if 'name' in incoming_msg.lower():
+    elif 'name' in incoming_msg.lower():
         text = 'Please confirm your phone number.\n Example Number:986754321 🙂🙂'
         msg.body(text)
         responded = True
         
-    if 'number' in incoming_msg.lower():
+    elif 'number' in incoming_msg.lower():
         text = 'We confirmed you John doe now please say info to get all the services 🙂🙂'
         msg.body(text)
         responded = True
     
     
-    if 'info' in incoming_msg.lower():
+    elif 'info' in incoming_msg.lower():
         # return total cases
         text='IRA  Bot 🤖 supports Following \n Menu:\n 1:Check Balance \n 2:Cheque Book Request \n 3:E-statement \n 4:Exit'
         msg.body(text)
         responded = True
         
-    if 'check balance' in incoming_msg.lower() or '1' in incoming_msg.lower():
+    elif 'check balance' in incoming_msg.lower() or '1' in incoming_msg.lower():
         text='Your balance is Rs.21245 for going to main menu replay with info 🙂🙂'
         msg.body(text)
         responded = True
         
-    if 'cheque book request' in incoming_msg.lower() or '2' in incoming_msg.lower():
+    elif 'cheque book request' in incoming_msg.lower() or '2' in incoming_msg.lower():
         text='You are requested for cheque book it will delivered in next 7 days 🙂🙂.\n for going to main menu replay with info'
         msg.body(text)
         responded = True
         
-    if 'e-statement' in incoming_msg.lower() or 'statement' in incoming_msg.lower() or '3' in incoming_msg.lower():
+    elif 'e-statement' in incoming_msg.lower() or 'statement' in incoming_msg.lower() or '3' in incoming_msg.lower():
         text='E-staetment is mailed to your email id a*****dt@***.com 🙂🙂 \n for going to main menu replay with info'
         msg.body(text)
         responded = True    
         
-    if 'bye' in incoming_msg.lower() or 'exit' in incoming_msg.lower() or '4' in incoming_msg.lower():
+    elif 'bye' in incoming_msg.lower() or 'exit' in incoming_msg.lower() or '4' in incoming_msg.lower():
         text='Bye nice talking to you'
         msg.body(text)
         responded = True
