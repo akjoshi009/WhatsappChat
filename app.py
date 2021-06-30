@@ -18,7 +18,7 @@ def bot():
     msg = resp.message()
     responded = False
     
-    if 'hi' in incoming_msg.lower() or 'hey' in incoming_msg.lower() or 'hello' in incoming_msg.lower():
+    if 'hi' == incoming_msg.lower() or 'hey' == incoming_msg.lower() or 'hello' == incoming_msg.lower():
         text =  'Hi I am IRA Bot 🤖 ,\n Please tell your name.\n Example(Name:John doe)'
         msg.body(text)
         responded = True
