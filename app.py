@@ -19,10 +19,21 @@ def bot():
     responded = False
     
     if 'hi' in incoming_msg.lower() or 'hey' in incoming_msg.lower() or 'hello' in incoming_msg.lower():
-        text =  'Hi I am IRA Bot 🤖 ,Please say info to get all menu.'
+        text =  'Hi I am IRA Bot 🤖 ,\n Please tell your name.\n Example(Name:John doe)'
         msg.body(text)
         responded = True
 
+    if 'name' in incoming_msg.lower():
+        text = 'Please confirm your phone number.\n Example Number:986754321 🙂🙂'
+        msg.body(text)
+        responded = True
+        
+    if 'number' in incoming_msg.lower():
+        text = 'We confirmed you John doe now please say info to get all the services 🙂🙂'
+        msg.body(text)
+        responded = True
+    
+    
     if 'info' in incoming_msg.lower():
         # return total cases
         text='IRA  Bot 🤖 supports Following \n Menu:\n 1:Check Balance \n 2:Cheque Book Request \n 3:E-statement \n 4:Exit'
