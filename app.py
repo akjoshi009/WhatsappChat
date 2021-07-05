@@ -29,7 +29,7 @@ def bot():
         responded = True
         
     elif 'number' in incoming_msg.lower():
-        text = 'We confirmed you John doe now please say info to get all the services 🙂🙂'
+        text = 'We confirmed you user now please say info to get all the services 🙂🙂'
         msg.body(text)
         responded = True
     
