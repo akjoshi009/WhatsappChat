@@ -33,7 +33,8 @@ def insertmsgs(stage,number,msg):
 
 @app.route("/")
 def hello():
-    dt=getstageinfo('12456456')
+    url2='https://api.coindesk.com/v1/bpi/currentprice.json'
+    dt = requests.get(url = url2)
     return "Hello World!"+str(dt)
 
 @app.route('/bot', methods=['POST'])
