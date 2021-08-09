@@ -33,7 +33,8 @@ def insertmsgs(stage,number,msg):
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    dt=getstageinfo('12456456')
+    return "Hello World!"+str(dt)
 
 @app.route('/bot', methods=['POST'])
 def bot():
