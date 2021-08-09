@@ -35,7 +35,9 @@ def insertmsgs(stage,number,msg):
 def hello():
     url2='https://api.coindesk.com/v1/bpi/currentprice.json'
     dt = requests.get(url = url2)
-    return "Hello World!"+str(dt)
+    data = dt.json()
+    #print(data)
+    return "Hello World!"+str(data)
 
 @app.route('/bot', methods=['POST'])
 def bot():
