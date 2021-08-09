@@ -47,6 +47,7 @@ def bot():
        staged=getstageinfo(mobnumber)
        print("Staged"+str(staged))
     except:
+        staged='0'
         pass
     if(staged=='0'):
         text =  'Hi I am IRA Bot 🤖 ,\n Please tell your name.\n Example(Name:John doe)'
