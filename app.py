@@ -43,7 +43,11 @@ def bot():
     resp = MessagingResponse()
     msg = resp.message()
     responded = False
-    #staged=getstageinfo(mobnumber)
+    try:
+       staged=getstageinfo(mobnumber)
+       print("Staged"+str(staged))
+    except:
+        pass
     if(staged=='0'):
         text =  'Hi I am IRA Bot 🤖 ,\n Please tell your name.\n Example(Name:John doe)'
         msg.body(text)
