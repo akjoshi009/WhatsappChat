@@ -7,7 +7,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    url2='https://api.coindesk.com/v1/bpi/currentprice.json'
+    dt = requests.get(url = url2)
+    data = dt.json()
+    print(data)
+    return "Hello World!"+str(data)
+    
 
 @app.route('/bot', methods=['POST'])
 def bot():
