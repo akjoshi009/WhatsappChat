@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    url2='https://api.coindesk.com/v1/bpi/currentprice.json'
+    url2='http://kms.1point1.in/voicebot/api/v1/getstage?id=12456456'
     dt = requests.get(url = url2)
     data = dt.json()
     print(data)
