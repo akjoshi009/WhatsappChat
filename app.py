@@ -2,15 +2,14 @@ from flask import Flask, request
 import requests
 import json
 from twilio.twiml.messaging_response import MessagingResponse
+import socket
+
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    url2='http://kms.1point1.in/voicebot/api/v1/getstage?id=12456456'
-    dt = requests.get(url = url2)
-    data = dt.json()
-    print(data)
+    data=socket.gethostbyname(socket.gethostname())
     return "Hello World!"+str(data)
     
 
